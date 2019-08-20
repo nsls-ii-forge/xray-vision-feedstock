@@ -1,51 +1,53 @@
+{% set name = "xray-vision" %}
 {% set version = "0.0.9" %}
+{% set sha256 = "dfa783b5035c54847dd34f951b1d758bc4092e78c85f76be69c895e17f35bdca" %}
 
 package:
-    name: xray-vision
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    url: https://github.com/Nikea/xray-vision/archive/v{{ version }}.tar.gz
-    fn: xray-vision-v{{ version }}.tar.gz
-    sha256: dfa783b5035c54847dd34f951b1d758bc4092e78c85f76be69c895e17f35bdca
+  url: https://github.com/Nikea/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    noarch: python
-    number: 0
-    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-    host:
-        - python
-        - pip
-    run:
-        - numpy
-        - matplotlib
-        - pyqt
-        - python
-        - six
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - matplotlib
+    - numpy
+    - pyqt
+    - six
 
 test:
-    imports:
-        - PyQt5
-        - xray_vision
-        - xray_vision.backend
-        - xray_vision.backend.mpl
-        - xray_vision.mask
-        - xray_vision.messenger
-        - xray_vision.messenger.mpl
-        - xray_vision.mpl_plotting
-        - xray_vision.qt_widgets
-        - xray_vision.utils
+  imports:
+    - PyQt5
+    - xray_vision
+    - xray_vision.backend
+    - xray_vision.backend.mpl
+    - xray_vision.mask
+    - xray_vision.messenger
+    - xray_vision.messenger.mpl
+    - xray_vision.mpl_plotting
+    - xray_vision.qt_widgets
+    - xray_vision.utils
 
 about:
-    home: https://github.com/Nikea/xray-vision
-    license: 3-Clause BSD
-    summary: Visualization widgets and plotting helpers targeted at X-Ray Sciences
+  home: https://github.com/Nikea/xray-vision
+  license: 3-Clause BSD
+  license_file: LICENSE
+  summary: Visualization widgets and plotting helpers targeted at X-Ray Sciences
 
 extra:
-    recipe-maintainers:
-        - ericdill
-        - licode
-        - tacaswell
-        - CJ-Wright
+  recipe-maintainers:
+    - ericdill
+    - licode
+    - tacaswell
+    - CJ-Wright
