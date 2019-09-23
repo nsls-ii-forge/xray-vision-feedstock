@@ -44,10 +44,3 @@ about:
   license: 3-Clause BSD
   license_file: LICENSE
   summary: Visualization widgets and plotting helpers targeted at X-Ray Sciences
-
-extra:
-  recipe-maintainers:
-    - ericdill
-    - licode
-    - tacaswell
-    - CJ-Wright
