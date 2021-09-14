@@ -1,6 +1,6 @@
 {% set name = "xray-vision" %}
-{% set version = "0.0.9" %}
-{% set sha256 = "dfa783b5035c54847dd34f951b1d758bc4092e78c85f76be69c895e17f35bdca" %}
+{% set version = "0.0.10" %}
+{% set sha256 = "d7ef6dd6eacf7fe611f49d2d5ffb833e9f322e7d528cc7215b6d7a6e15a3c079" %}
 
 package:
   name: {{ name|lower }}
