@@ -1,6 +1,6 @@
 {% set name = "xray-vision" %}
-{% set version = "0.0.9" %}
-{% set sha256 = "dfa783b5035c54847dd34f951b1d758bc4092e78c85f76be69c895e17f35bdca" %}
+{% set version = "0.0.10" %}
+{% set sha256 = "35446f098dfdaadfc25f29f8df16d3dac5c46adc4741fadfd012a9ade3e96efe" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
